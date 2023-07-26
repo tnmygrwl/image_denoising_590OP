@@ -66,5 +66,4 @@ class EncDec(nn.Module):
         enc3_out = self.enc3(enc2_out)
         dec1_out = self.dec1(enc3_out)
         dec2_out = self.dec2(dec1_out)
-        dec3_out = self.dec3(dec2_out)
-        return dec3_out
+        return self.dec3(dec2_out)

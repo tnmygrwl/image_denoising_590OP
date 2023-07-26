@@ -102,7 +102,7 @@ for i in tqdm(range(n_epochs)):
     loss_train.backward()
     opt.step()
 
-x = np.array([p for p in range(n_epochs)])
+x = np.array(list(range(n_epochs)))
 plt.plot(x, np.array(train_error), color='blue', label = "train_error", linewidth=1.5)
 plt.plot(x, np.array(test_error), color='green', label = "test_error", linewidth=1.5)
 plt.xlabel("No. of Epochs", fontsize=14)
